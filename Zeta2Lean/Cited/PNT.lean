@@ -1,5 +1,9 @@
-import Zeta2Lean.Cited.PNTStatement
-import Zeta2Lean.Cited.Vendor.PNT.WienerIkehara
+module
+
+public import Zeta2Lean.Cited.PNTStatement
+public import Zeta2Lean.Cited.Vendor.PNT.WienerIkehara
+
+@[expose] public section
 
 /-!
 # Zeta2Lean.Cited.PNT — the prime number theorem `PNT_Stmt`, proved

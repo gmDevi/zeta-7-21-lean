@@ -1,5 +1,9 @@
-import Zeta2Lean.Window.PhiTable
-import Zeta2Lean.Cited.PNTStatement
+module
+
+public import Zeta2Lean.Window.PhiTable
+public import Zeta2Lean.Cited.PNTStatement
+
+@[expose] public section
 
 /-!
 # Zeta2Lean.Window.Statements — one `Prop` per lemma of the window proof

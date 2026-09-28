@@ -1,4 +1,8 @@
-import Zeta2Lean.Window.Main
+module
+
+public import Zeta2Lean.Window.Main
+
+@[expose] public section
 
 /-!
 # Proof of the statement in `Challenge.lean`

@@ -1,4 +1,8 @@
-import Zeta2Lean.Window.Statements
+module
+
+public import Zeta2Lean.Window.Statements
+
+@[expose] public section
 
 /-!
 # Zeta2Lean.Window.Assembly — the main theorem from the statements (complete, no gaps)

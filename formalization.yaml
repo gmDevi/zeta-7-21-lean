@@ -279,8 +279,8 @@ automation:
           The session ran from 2026-09-23 to 2026-09-26 and also covered the two 2-adic
           repositories listed under related_formalizations. The research behind this result ran
           on 2026-09-24 and 2026-09-25 (the literature search continued on 2026-09-26), and its
-          Lean development ran from 2026-09-25 to 2026-09-26 (the published repository has a single
-          squashed commit).
+          Lean development ran from 2026-09-25 to 2026-09-26 (the published history starts from a
+          single squashed commit).
         spend_usd: "not tracked"
         hardware: >-
           Anthropic API models; Lean builds and exact-arithmetic Python computations on a local
@@ -368,7 +368,14 @@ review:
     altered copy, with ∃ q : ℤ in place of ∃ q : ℚ, was also rejected (STATUS_WINDOW.md,
     "Independent pre-publication audit"). (6) Before publication the unused files of the {7, 9, 11}
     copy were removed; a declaration-level comparison (the type and value hashes of every constant
-    of the project modules) showed that no remaining declaration changed.
+    of the project modules) showed that no remaining declaration changed. (7) On 2026-09-28, for
+    Palomar's source requirements, every Lean file was ported to Lean's module system (a module
+    header, public imports and an @[expose] public section; the two certificate generators emit the
+    same header). No statement or proof changed. The project was rebuilt, #print axioms rechecked
+    (the same three axioms), Palomar's source-requirement check (PalomarSubmission 65f0154) found no
+    issue, and the Palomar-style comparator run was repeated: Solution.lean accepted by Lean's kernel,
+    NanoDa and con-ron (78 327 declarations), an altered Challenge with ζ(23) in place of ζ(21)
+    rejected.
 
 alignment:
   namespace: ZetaWindow

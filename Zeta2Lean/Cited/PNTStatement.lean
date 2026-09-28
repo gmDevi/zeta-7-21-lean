@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Zeta2Lean.Cited.PNTStatement — the prime number theorem, as a statement

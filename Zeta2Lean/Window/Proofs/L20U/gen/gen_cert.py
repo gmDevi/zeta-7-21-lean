@@ -285,8 +285,12 @@ def main(out):
     print("facts: log %d, arctan %d, Gf %d" % (len(cert.logf), len(cert.atf), len(cert.gff)), file=sys.stderr)
 
     H = []
-    H.append('''import Zeta2Lean.Window.Proofs.L20U.Pointwise
-import Zeta2Lean.Window.Proofs.L20U.Numerics
+    H.append('''module
+
+public import Zeta2Lean.Window.Proofs.L20U.Pointwise
+public import Zeta2Lean.Window.Proofs.L20U.Numerics
+
+@[expose] public section
 
 set_option linter.style.header false
 set_option linter.style.longLine false

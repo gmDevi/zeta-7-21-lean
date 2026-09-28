@@ -1,5 +1,9 @@
-import Zeta2Lean.Window.Proofs.L20U.Contour
-import Zeta2Lean.Window.Proofs.L20U.Gf
+module
+
+public import Zeta2Lean.Window.Proofs.L20U.Contour
+public import Zeta2Lean.Window.Proofs.L20U.Gf
+
+@[expose] public section
 
 set_option linter.style.header false
 set_option linter.style.longLine false

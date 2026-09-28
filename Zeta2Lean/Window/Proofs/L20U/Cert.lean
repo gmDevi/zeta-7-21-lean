@@ -1,5 +1,9 @@
-import Zeta2Lean.Window.Proofs.L20U.Pointwise
-import Zeta2Lean.Window.Proofs.L20U.Numerics
+module
+
+public import Zeta2Lean.Window.Proofs.L20U.Pointwise
+public import Zeta2Lean.Window.Proofs.L20U.Numerics
+
+@[expose] public section
 
 set_option linter.style.header false
 set_option linter.style.longLine false

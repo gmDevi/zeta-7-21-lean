@@ -1,4 +1,8 @@
-import Zeta2Lean.Window.Defs
+module
+
+public import Zeta2Lean.Window.Defs
+
+@[expose] public section
 
 /-!
 # Zeta2Lean.Window.PhiTable — the table of Zudilin's `φ(x) = min_y φ₀(x, y)` on `(0, 1)` for `cfgW`

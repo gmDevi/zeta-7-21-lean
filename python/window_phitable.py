@@ -92,7 +92,11 @@ def weight(a, b, v, M, K):
 
 def lean_file(P, K, total):
     lines = []
-    lines.append("import Zeta2Lean.Window.Defs")
+    lines.append("module")
+    lines.append("")
+    lines.append("public import Zeta2Lean.Window.Defs")
+    lines.append("")
+    lines.append("@[expose] public section")
     lines.append("")
     lines.append("/-!")
     lines.append("# Zeta2Lean.Window.PhiTable — the table of Zudilin's `φ(x) = min_y φ₀(x, y)` on `(0, 1)` for `cfgW`")
