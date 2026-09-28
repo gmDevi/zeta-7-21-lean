@@ -1,1 +1,5 @@
-import Zeta2Lean.Window.Main
+module
+
+public import Zeta2Lean.Window.Main
+
+@[expose] public section

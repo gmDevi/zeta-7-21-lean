@@ -1,23 +1,27 @@
-import Zeta2Lean.Window.Assembly
-import Zeta2Lean.Window.Proofs.ZetaReal
-import Zeta2Lean.Window.Proofs.Criterion
-import Zeta2Lean.Window.Proofs.PartialFractions
-import Zeta2Lean.Window.Proofs.CoeffVanish
-import Zeta2Lean.Window.Proofs.LinearForm
-import Zeta2Lean.Window.Proofs.BrickIntegral
-import Zeta2Lean.Window.Proofs.BrickValuation
-import Zeta2Lean.Window.Proofs.LaurentSupport
-import Zeta2Lean.Window.Proofs.LaurentIntegral
-import Zeta2Lean.Window.Proofs.LaurentValuation
-import Zeta2Lean.Window.Proofs.Harmonic
-import Zeta2Lean.Window.Proofs.Lemma19
-import Zeta2Lean.Window.Proofs.OmegaPhi0
-import Zeta2Lean.Window.Proofs.PhiTable
-import Zeta2Lean.Window.Proofs.PhiData
-import Zeta2Lean.Window.Proofs.DenomGrowth
-import Zeta2Lean.Window.Proofs.Lemma20Upper
-import Zeta2Lean.Window.Proofs.AuxPrime
-import Zeta2Lean.Cited.PNT
+module
+
+public import Zeta2Lean.Window.Assembly
+public import Zeta2Lean.Window.Proofs.ZetaReal
+public import Zeta2Lean.Window.Proofs.Criterion
+public import Zeta2Lean.Window.Proofs.PartialFractions
+public import Zeta2Lean.Window.Proofs.CoeffVanish
+public import Zeta2Lean.Window.Proofs.LinearForm
+public import Zeta2Lean.Window.Proofs.BrickIntegral
+public import Zeta2Lean.Window.Proofs.BrickValuation
+public import Zeta2Lean.Window.Proofs.LaurentSupport
+public import Zeta2Lean.Window.Proofs.LaurentIntegral
+public import Zeta2Lean.Window.Proofs.LaurentValuation
+public import Zeta2Lean.Window.Proofs.Harmonic
+public import Zeta2Lean.Window.Proofs.Lemma19
+public import Zeta2Lean.Window.Proofs.OmegaPhi0
+public import Zeta2Lean.Window.Proofs.PhiTable
+public import Zeta2Lean.Window.Proofs.PhiData
+public import Zeta2Lean.Window.Proofs.DenomGrowth
+public import Zeta2Lean.Window.Proofs.Lemma20Upper
+public import Zeta2Lean.Window.Proofs.AuxPrime
+public import Zeta2Lean.Cited.PNT
+
+@[expose] public section
 
 set_option linter.style.header false
 

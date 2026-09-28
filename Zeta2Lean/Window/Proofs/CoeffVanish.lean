@@ -1,4 +1,8 @@
-import Zeta2Lean.Window.Statements
+module
+
+public import Zeta2Lean.Window.Statements
+
+@[expose] public section
 
 set_option linter.style.header false
 set_option linter.style.longLine false

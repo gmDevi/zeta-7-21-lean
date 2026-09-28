@@ -1,7 +1,11 @@
+module
+
 -- Auditor-2: kernel evaluation of Lean definitions against the Python values (cfgW, n = 1).
 -- To run: copy to Zeta2Lean/Scratch/ and  bash scripts/check.sh Zeta2Lean/Scratch/<file>  (about 50 s, exit 0).
 -- Last run 2026-09-25: exit=0, every example accepted.
-import Zeta2Lean.Window.Defs
+public import Zeta2Lean.Window.Defs
+
+@[expose] public section
 
 /-! Auditor-2 scratch: kernel evaluation of the Lean definitions against the auditor's Python values
 (cfgW, n = 1).  Not part of the build; delete after use. -/

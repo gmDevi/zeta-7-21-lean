@@ -198,8 +198,10 @@ ships `lake comparator`; it needs `bwrap` (bubblewrap) for its sandbox. On 2026-
 `lake comparator`, run as Palomar runs it (`Challenge.lean` compiled outside Lake against Mathlib only, both modules
 exported with `leanexport`, the NanoDa and con-ron kernels besides Lean's), accepted `Solution.lean`; the run was
 unsandboxed, because bubblewrap is not installed on that machine. An altered copy of `Challenge.lean`, with ζ(23) in
-place of ζ(21), was rejected. Compiled alone with `lean` against the pinned Mathlib, `Challenge.lean` depends only on
-Lean core and Mathlib. `formalization.yaml` records the sources, the production process and the review status.
+place of ζ(21), was rejected. On 2026-09-28 every Lean file was ported to Lean's module system (a `module` header,
+`public import` and an `@[expose] public section`), as Palomar now requires; no statement or proof changed, and
+the same comparator run and negative control gave the same results. Compiled alone with `lean` against the pinned
+Mathlib, `Challenge.lean` depends only on Lean core and Mathlib. `formalization.yaml` records the sources, the production process and the review status.
 
 ## Building
 

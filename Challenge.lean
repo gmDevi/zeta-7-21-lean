@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # At least one of ζ(7), ζ(9), …, ζ(21) is irrational

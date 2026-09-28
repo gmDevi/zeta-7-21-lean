@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Zeta2Lean.Window.Defs — every definition of the window formalisation

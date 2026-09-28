@@ -1,9 +1,13 @@
+module
+
 /-
 Copyright (c) 2026 Terence Tao. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Terence Tao
 -/
-import Mathlib
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Compactly supported functions are dense in Schwartz space

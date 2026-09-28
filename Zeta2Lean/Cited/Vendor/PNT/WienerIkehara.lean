@@ -1,11 +1,15 @@
+module
+
 /-
 Copyright (c) 2026 The PrimeNumberTheoremAnd contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jose Francisco Antonio Balderas, Vincent Beffara, Alex Kontorovich, Terence Tao,
   Ruben Van de Velde, Arend Mellendijk, Alastair Irving
 -/
-import Mathlib
-import Zeta2Lean.Cited.Vendor.PNT.SchwartzCompactSupport
+public import Mathlib
+public import Zeta2Lean.Cited.Vendor.PNT.SchwartzCompactSupport
+
+@[expose] public section
 /-!
 # The Wiener-Ikehara Tauberian theorem
 
