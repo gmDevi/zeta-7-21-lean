@@ -1,0 +1,6 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": ["ZetaWindow.zeta_7_to_21_not_all_rational_palomar"],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

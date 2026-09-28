@@ -1,0 +1,9 @@
+config q23_160 tau_d = (159.356418053795 + 8.39371237206876j)  Re f0 = -750.711694833944  Im f0/pi = -466.613357473
+n= 12  log|F|/n = -757.61267428865  sign -1   branch rates {3: -757.252, 1: -772.389}   exact/asym = 1.1798357
+n= 16  log|F|/n = -755.89887727442  sign -1   branch rates {3: -755.629, 1: -771.205}   exact/asym = 1.0024911
+n= 20  log|F|/n = -755.06848108319  sign -1   branch rates {3: -754.852, 1: -770.39}   exact/asym = 0.9906436
+n= 30  log|F|/n = -753.80104783917  sign +1   branch rates {3: -753.657, 1: -769.258}   exact/asym = 1.0134737
+n= 50  log|F|/n = -752.65969759559  sign +1   branch rates {3: -752.573, 1: -764.527}   exact/asym = 1.0014213
+n=100  log|F|/n = -751.80178846549  sign +1   branch rates {3: -751.759, 1: -757.619}   exact/asym = 0.98715793
+n=200  log|F|/n = -751.28529499137  sign +1   branch rates {3: -751.264, 1: -754.166}   exact/asym = 1.0003502
+done

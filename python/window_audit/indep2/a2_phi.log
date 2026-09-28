@@ -1,0 +1,12 @@
+max breakpoint denominator: 160  #D = 78
+breakpoints in [0,1]: 2645
+phi evaluated in 4.3 s; min on intervals 0, min at breakpoints 0
+interval-constancy violations (3 extra points per interval): 0
+int_[1/60,1) phi/x^2 = 584.8381821988823719882
+int_[1,inf)  phi/x^2 = 9.110512011443343813629
+int total            = 593.9486942103257158019
+C2 = 1341 - int      = 747.0513057896742841981
+Lean table pieces: 2602
+table violations: 0
+phiSumQ(table, 60, 20) = 593.5146378485069  1341 - it = 747.4853621514931  < 748: True
+positive-phi intervals not covered by the table: 0

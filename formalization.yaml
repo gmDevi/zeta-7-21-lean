@@ -1,0 +1,429 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml v0.4 (https://github.com/mathlib-initiative/formalization.yaml), with the
+# fields Palomar requires (https://github.com/PalomarRegistry/PalomarPolicy/blob/main/CONTRIBUTING.md).
+version: "v0.4"
+
+project:
+  name: "At least one of ζ(7), ζ(9), …, ζ(21) is irrational"
+  description: >-
+    A Lean 4 and Mathlib proof that at least one of the eight values ζ(7), ζ(9), ζ(11), ζ(13),
+    ζ(15), ζ(17), ζ(19), ζ(21) of the Riemann zeta function is irrational. The statement uses only
+    Mathlib's riemannZeta, the theorem has no hypotheses, and its proof uses only the axioms
+    propext, Classical.choice and Quot.sound. The shortest list of odd zeta values starting at ζ(7)
+    that our literature search found proved to contain an irrational number was ζ(7), ζ(9), …,
+    ζ(35) (W. Zudilin, Math. Notes 2001). The proof uses the very-well-poised linear forms of Zudilin
+    (J. Théor. Nombres Bordeaux 2004, §8) with five derivatives, 23 factors and the direction vector
+    η₀ = 160, η = (47, 47, 47, 47, 48, 50, 50, 51, 52, …, 66); they are linear forms in 1, ζ(7),
+    ζ(9), …, ζ(21) with rational coefficients. Zudilin anticipated such an improvement but could
+    not prove the asymptotics of his forms (his Lemma 20) for more than three derivatives. The proof
+    here does not need them. The denominators of the coefficients are bounded by Zudilin's arithmetic lemma,
+    the prime number theorem (proved from a vendored Lean proof of the Wiener–Ikehara theorem) and
+    a kernel-checked table of 2602 pieces of Zudilin's function φ. For large n the forms are bounded
+    by e^(−748.1n), through a contour integral on a fixed vertical line, pointwise estimates and
+    certified numerical inequalities, without saddle-point analysis. They are non-zero if the eight
+    values are rational, because at the auxiliary primes ℓ = 63n − 1, of which there are infinitely
+    many by Dirichlet's theorem, the constant term has ℓ-adic valuation −5 while the coefficients of
+    the zeta values are ℓ-integral. The theorem does not say which value is irrational. The
+    mathematics and the Lean code were produced by AI agents under human direction and have not been
+    refereed.
+  # Humans only: AI systems are credited in automation.methods, never here.
+  authors:
+    - "Gennaro Marco Devincenzis"
+  responsible_maintainers:
+    - "Gennaro Marco Devincenzis"
+  license: "Apache-2.0"
+
+classification:
+  arxiv: [math.NT]
+  msc2020: [11J72, 11M06, 33C20]
+
+sources:
+  - title: >-
+      At least one of ζ(7), ζ(9), …, ζ(21) is irrational (informal proof in docs/proof.md of this
+      repository)
+    type: original-proof
+    id: "docs/proof.md (this repository)"
+    relationship: other
+    note: >-
+      The theorem is first presented here, by the informal proof docs/proof.md (with its first
+      version docs/window/proof.md and the track write-ups in docs/window/refine/) and this Lean
+      formalisation. Both were produced by AI agents under the direction of the maintainer (see
+      automation) and have not been refereed. The construction is Zudilin's, and the proof carries
+      out, for one configuration, the improvement Zudilin anticipated at the end of §8 of his 2004
+      paper (see that source). README.md lists how the Lean proof differs from docs/proof.md (it
+      follows route R2 of docs/proof.md §6, with weaker constants and its own certificates).
+      Literature search (2026-09-24 to 2026-09-26, by AI agents): Zudilin's publication list; arXiv,
+      with author searches for Zudilin, Rivoal, Fischler, Lai and Sprang up to September 2026;
+      zbMATH Open; the lists of works citing Zudilin's papers of 2001–2004 in OpenAlex, Semantic
+      Scholar, mathnet.ru and Google Scholar; Zudilin's 2011 survey and 2013 habilitation thesis;
+      Zenodo. No list of odd zeta values starting at ζ(7) shorter than ζ(7), …, ζ(35) and known to
+      contain an irrational number was found, and no execution of Zudilin's remark. An unrefereed
+      preprint claims that ζ(7) is irrational, which would imply the result (listed below).
+      MathSciNet was not searched. Novelty beyond this search is not established.
+
+  - title: "Arithmetic of linear forms involving odd zeta values"
+    authors: ["Wadim Zudilin"]
+    type: paper
+    id: "https://doi.org/10.5802/jtnb.447"
+    location: >-
+      J. Théor. Nombres Bordeaux 16 (2004), no. 1, 251–291; arXiv:math/0206176. Section 8: the
+      very-well-poised forms (8.1)–(8.13), Lemmas 15–19 (arithmetic), Lemma 20 (asymptotics),
+      Proposition 5 (the irrationality criterion and the growth of the denominators), and the
+      remark at the end of Section 8 (p. 286).
+    relationship: other
+    note: >-
+      The construction and its arithmetic. The linear forms, the denominator bound (Lemma 19, built
+      from the elementary bricks of Lemmas 15–18) and the criterion of Proposition 5 are Zudilin's,
+      used here with r = 5, q = 23, η₀ = 160, η = (47, 47, 47, 47, 48, 50, 50, 51, 52, …, 66); they
+      are restated and proved in Lean here (Zeta2Lean/Window) for every admissible configuration.
+      Zudilin proves Lemma 20, the asymptotics of the forms, only for r = 3, and remarks at the end
+      of Section 8 that his lists ζ(7), …, ζ(35) and ζ(9), …, ζ(51) can be improved with these forms
+      but that he could not prove the general case of Lemma 20. The recorded theorem is such an
+      improvement; Lemma 20 is not used, and the new Theorems U and N of docs/proof.md replace it.
+      The paper's theorems themselves are not formalised.
+    author_endorsement: not-contacted
+
+  - title: "One of the eight numbers ζ(5), ζ(7), …, ζ(17), ζ(19) is irrational"
+    authors: ["Wadim Zudilin"]
+    type: paper
+    id: "https://doi.org/10.1023/A:1012312315852"
+    location: >-
+      Math. Notes 70 (2001), no. 3–4, 426–431 (translated from Mat. Zametki 70 (2001), no. 3,
+      472–476; author name V. V. Zudilin). Theorem 2.
+    relationship: other
+    note: >-
+      Prior result that the recorded theorem improves: Theorem 2 states that at least one of ζ(7),
+      ζ(9), …, ζ(35) is irrational, and the recorded theorem shortens this list to ζ(7), …, ζ(21).
+      Nothing of this paper is formalised or used in the proof.
+    author_endorsement: not-contacted
+
+  - title: "At least two of ζ(5), ζ(7), …, ζ(35) are irrational"
+    authors: ["Li Lai", "Li Zhou"]
+    type: paper
+    id: "https://doi.org/10.5486/PMD.2022.9252"
+    location: >-
+      Publ. Math. Debrecen 101 (2022), no. 3–4, 353–372; arXiv:2103.00904. Theorem 1.2.
+    relationship: background
+    note: >-
+      Related result, not used in the proof. Two of ζ(5), ζ(7), …, ζ(35) are irrational; in
+      particular one of ζ(7), …, ζ(35) is, the same list as Zudilin's Theorem 2 of 2001. The
+      recorded theorem gives a shorter list with one irrational value; neither result implies the
+      other.
+    author_endorsement: not-contacted
+
+  - title: "Many p-adic odd zeta values are irrational"
+    authors: ["Li Lai", "Johannes Sprang"]
+    type: paper
+    id: "https://arxiv.org/abs/2306.10393"
+    location: >-
+      arXiv:2306.10393 (v2, 2025; to appear in Michigan Math. J.). Lemma 2.3 (the Archimedean
+      irrationality criterion with auxiliary primes ℓ(n); Lemma 2.2 is the p-adic version).
+    relationship: other
+    note: >-
+      The nonvanishing step is an instance of Lemma 2.3: if the values were rational, then at the
+      auxiliary prime ℓ = 63n − 1, where the constant term of the form has strictly smaller ℓ-adic
+      valuation than the coefficients of the zeta values, the form cannot vanish. The consequence
+      needed here (ZetaWindow.Fn_frequently_ne_zero, with the valuations of
+      ZetaWindow.AuxPrime_proof) is proved in Lean; the lemma is not formalised as stated in the
+      paper.
+    author_endorsement: not-contacted
+
+  - title: >-
+      The Wiener–Ikehara Tauberian theorem and the prime number theorem, in the Lean 4 proofs of
+      mathlib4 pull requests #43046, #43233 and #43238
+    authors:
+      - "Jose Francisco Antonio Balderas"
+      - "Vincent Beffara"
+      - "Alex Kontorovich"
+      - "Terence Tao"
+      - "Ruben Van de Velde"
+      - "Arend Mellendijk"
+      - "Alastair Irving"
+    type: other
+    id: "https://github.com/leanprover-community/mathlib4/pull/43238"
+    location: >-
+      Head commit 78e1b2bbd0d256081c926fccada84fd084653286 of pull request #43238, which contains
+      #43046 and #43233 (open, not merged in Mathlib as of 2026-09-25). Authors as in the file
+      headers.
+    relationship: other
+    note: >-
+      This source is Lean code, not a paper, hence type other; the pull requests are also listed
+      under related_formalizations. The prime number theorem ψ(x)/x → 1 is needed for the growth of
+      the denominators. It is proved in Lean here (Zeta2.PNT_proof) from the Wiener–Ikehara theorem,
+      whose Lean proof is vendored verbatim, with porting notes and the upstream Apache-2.0 headers,
+      in Zeta2Lean/Cited/Vendor/PNT. The derivation of the prime number theorem follows
+      WeakPNT.lean of #43238. The pull requests are by Terence Tao and adapt code of the
+      PrimeNumberTheoremAnd project (see related_formalizations). This is an ingredient of the
+      proof, not the recorded result.
+    license: "Apache-2.0"
+    author_endorsement: not-contacted
+
+  - title: >-
+      La fonction zêta de Riemann prend une infinité de valeurs irrationnelles aux entiers impairs
+    authors: ["Tanguy Rivoal"]
+    type: paper
+    id: "https://doi.org/10.1016/S0764-4442(00)01624-4"
+    location: "C. R. Acad. Sci. Paris Sér. I Math. 331 (2000), no. 4, 267–270; arXiv:math/0008051"
+    relationship: background
+    note: >-
+      Infinitely many values ζ(2k+1) are irrational. Context: the hypergeometric construction of
+      linear forms in odd zeta values on which Zudilin's forms build.
+
+  - title: "Irrationalité d'une infinité de valeurs de la fonction zêta aux entiers impairs"
+    authors: ["Keith Ball", "Tanguy Rivoal"]
+    type: paper
+    id: "https://doi.org/10.1007/s002220100168"
+    location: "Invent. Math. 146 (2001), no. 1, 193–207"
+    relationship: background
+    note: >-
+      The dimension of the span of 1, ζ(3), ζ(5), …, ζ(a) over ℚ grows like log a. Context: the
+      very-well-poised series behind Zudilin's forms.
+
+  - title: "Zeta 7 is Irrational"
+    authors: ["Prince Anand"]
+    type: paper
+    id: "https://doi.org/10.5281/zenodo.22920911"
+    location: "Zenodo preprint, 23 September 2026"
+    relationship: background
+    note: >-
+      Unrefereed preprint claiming that ζ(7) is irrational, by Hankel determinants after the method
+      of A. Fauzan's preprint below. If correct, it would imply the recorded theorem. Our own
+      check could not confirm two constants on which its final inequality rests, so we do not
+      regard ζ(7) as settled. Not used here.
+    author_endorsement: not-contacted
+
+  - title: "ζ(5) is irrational"
+    authors: ["Aabir Fauzan"]
+    type: paper
+    id: "https://doi.org/10.5281/zenodo.22826419"
+    location: "Zenodo preprint, 17 September 2026"
+    relationship: background
+    note: >-
+      Unrefereed preprint claiming that ζ(5) is irrational; Lean formalisations of it have been
+      announced by others. Context for lists of odd zeta values that start at ζ(7). Not used here.
+    author_endorsement: not-contacted
+
+related_formalizations:
+  - id: "https://github.com/gmDevi/zeta2-7-9-11-lean"
+    relationship: builds-on
+    note: >-
+      Formalisation by the same maintainer, registered in the Palomar registry as
+      PALOMAR-2026-09-25-000023 (commit 2ae1bccb82f1f72ed7a7aeab3196aa1cdbee165a): at least one of
+      the 2-adic zeta values ζ₂(7), ζ₂(9), ζ₂(11) is irrational. This repository started as a copy
+      of that one, and the files that the theorem here does not use were removed. It reuses the
+      vendored Wiener–Ikehara files (identical) and the proof of the prime number theorem (the same
+      declarations, collected in Zeta2Lean/Cited/PNT.lean, with the statement PNT_Stmt in
+      Zeta2Lean/Cited/PNTStatement.lean). The mathematics is different: that result concerns 2-adic
+      values.
+  - id: "https://github.com/gmDevi/zeta2-7-9-lean"
+    relationship: builds-on
+    note: >-
+      Formalisation by the same maintainer, registered in the Palomar registry as
+      PALOMAR-2026-09-25-000026 (commit 3797cb6e4f8653744c0aa8e66ec8eb3645e75dcd): at least one of
+      the 2-adic zeta values ζ₂(7), ζ₂(9) is irrational. Its growth bound uses the same contour
+      technique as Theorem U here. Zeta2Lean/Window/Proofs/L20U/VLine.lean (from
+      Zeta2Lean/Pair/Proofs/Growth.lean), Zeta2Lean/Window/Proofs/L20U/Numerics.lean (from
+      Zeta2Lean/Pair/Proofs/Landscape/Numerics.lean) and the first block of
+      Zeta2Lean/Window/Proofs/L20U/Gf.lean are copied from it with the namespace changed, and
+      Zeta2Lean/Cited/PNT.lean has the same declarations as its file of that name. The ℓ-adic
+      infrastructure of Zeta2Lean/Window/Proofs/AuxPrime.lean follows its nonvanishing proof.
+  - id: "https://github.com/leanprover-community/mathlib4/pull/43238"
+    relationship: builds-on
+    note: >-
+      Open mathlib4 pull requests by Terence Tao: #43046 (compactly supported functions are dense in
+      Schwartz space), #43233 (the Wiener–Ikehara Tauberian theorem) and #43238 (the weak prime
+      number theorem), at head 78e1b2bbd0d256081c926fccada84fd084653286. The files of #43046 and
+      #43233 are vendored verbatim, with porting notes, in Zeta2Lean/Cited/Vendor/PNT. Once they are
+      in Mathlib, the vendored copies can be dropped.
+  - id: "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
+    relationship: builds-on
+    note: >-
+      Indirectly: the vendored Wiener–Ikehara code comes from the pull requests above, which adapt it
+      from the PrimeNumberTheoremAnd project. This repository does not depend on that project.
+
+status:
+  scope: >-
+    Formalised: the complete proof of the theorem stated in Challenge.lean, from Mathlib: Zudilin's
+    linear forms and his denominator bound (Lemma 19) for every admissible configuration, the prime
+    number theorem (from a vendored Lean proof of the Wiener–Ikehara theorem), the certified
+    φ-table and the growth of the denominators, the upper bound (Theorem U) with its numerical
+    inequalities, the auxiliary-prime separation (Theorem N), Dirichlet's theorem (from Mathlib) and
+    the criterion. The certified computations are checked by the Lean kernel (decide +kernel and
+    norm_num). Not formalised: the refined denominator bound of docs/proof.md (route R1) and the
+    saddle-point analysis of docs/window/proof.md; the theorem does not need them. The theorem says
+    that ζ(7), ζ(9), …, ζ(21) are not all rational. It does not say which of them is irrational, and
+    it gives no irrationality measure and no effective bound.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+  main_results:
+    - declaration: ZetaWindow.zeta_7_to_21_not_all_rational_palomar
+      file: Solution.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+
+automation:
+  methods:
+    - method: agent
+      framework: "Claude Code (Anthropic)"
+      tool_setup: >-
+        One interactive Claude Code session running an Anthropic Claude model, directed by the human
+        maintainer, orchestrated the work. It set up the research program on odd zeta values that
+        led to this result, chose among the directions it produced, launched and integrated the
+        subagent workflows listed below (all run with Anthropic Claude models), and prepared the repository
+        for publication (removal of the unused files of the {7, 9, 11} copy; the Challenge,
+        Solution and metadata files) with a preparer subagent and an auditor subagent.
+      cost:
+        wall_time: >-
+          The session ran from 2026-09-23 to 2026-09-26 and also covered the two 2-adic
+          repositories listed under related_formalizations. The research behind this result ran
+          on 2026-09-24 and 2026-09-25 (the literature search continued on 2026-09-26), and its
+          Lean development ran from 2026-09-25 to 2026-09-26 (the published repository has a single
+          squashed commit).
+        spend_usd: "not tracked"
+        hardware: >-
+          Anthropic API models; Lean builds and exact-arithmetic Python computations on a local
+          workstation (32 threads), GPU computations for the exploratory parameter searches
+    - method: autonomous
+      framework: "Claude Code subagents launched by workflow scripts"
+      tool_setup: >-
+        Research subagents searched configurations of Zudilin's forms with exact-arithmetic and GPU
+        computations and found the configuration used here (the first informal proof built on it,
+        docs/window/proof.md, is credited under the next method). Three refinement tracks (Theorem
+        U, Theorem N and a refined denominator bound), each re-derived by an adversarial verifier
+        subagent with its own code, and an assembler and final-referee subagent produced
+        docs/proof.md; literature subagents searched for prior results. An architect subagent wrote
+        the blueprint (BLUEPRINT_WINDOW.md), the definitions and statements
+        (Zeta2Lean/Window/Defs.lean, Statements.lean), the assembly and the exact-arithmetic mirror
+        (python/window_mirror.py). Two auditor subagents checked the
+        definitions and statements with independent code (python/window_audit/). Prover subagents,
+        one per proof file, wrote the Lean proofs against frozen statements, including the
+        certified φ-table checker and the certificates of Theorem U; a restater subagent moved the
+        statements to route R2 of docs/proof.md once Theorems U and N were available; integrator
+        subagents built the project, ran the sorry and axiom census and replayed every module with
+        Lean's leanchecker.
+      prompting_notes: >-
+        Task specifications were the statement docstrings and the "Workflow for provers" section of
+        BLUEPRINT_WINDOW.md. Statements were frozen, and provers reported problems back instead of
+        editing them.
+    - method: autonomous
+      framework: "Claude Code subagents launched by a workflow script"
+      tool_setup: >-
+        One separate research workflow of the same session, run on 2026-09-24 and 2026-09-25, coordinated several research directions on
+        the real odd zeta values. Its direction window-21-proof took the configuration found by the
+        searches above and wrote the first informal proof, docs/window/proof.md (route R4 of
+        docs/proof.md §6, with the saddle-point analysis), together with the scripts
+        docs/window/zud5.py, explore.py, certify_line.py and barnes_check.py, whose outputs are the
+        certificate and log files next to them. It wrote neither docs/proof.md nor any Lean code;
+        the refinement tracks, docs/proof.md and the formalisation built on its proof are credited
+        under the previous method.
+  spend_usd: "not tracked"
+  notes: >-
+    The mathematics (the configuration, Theorems U and N, and the informal proofs docs/proof.md and
+    docs/window/proof.md, on Zudilin's construction) and all Lean code of this repository, except
+    the vendored files in Zeta2Lean/Cited/Vendor/PNT (by Terence Tao and the PrimeNumberTheoremAnd
+    contributors), were produced by AI agents (Anthropic Claude models; the
+    first informal proof docs/window/proof.md and its scripts were written by a separate research
+    workflow, see the third method; the commit is co-authored by Claude) under the
+    direction of the human maintainer. The maintainer posed the research question that led to
+    this work (the irrationality of odd zeta values such as ζ(7)), directed and supervised the
+    runs, and is responsible for the submission. No human expert has checked the informal proof or
+    the Lean proof. The history of each round is in STATUS_WINDOW.md and
+    BLUEPRINT_WINDOW.md (commit hashes there refer to the unpublished development history).
+
+fidelity:
+  divergences: >-
+    None in the statement, which uses only Mathlib's riemannZeta: "rational" means "equal to the
+    image in ℂ of a rational number", and for integers k ≥ 2 Mathlib's riemannZeta k equals
+    Σ_{m ≥ 1} m^(−k) (zeta_nat_eq_tsum_of_gt_one). The Lean proof follows route R2 of docs/proof.md
+    with weaker constants (the denominators are at most e^(748n) and the forms at most e^(−748.1n)
+    for large n; docs/proof.md has e^(747.0513n+o(n)) and K n^16 e^(−750.618n)) and its own
+    kernel-checked certificates in place of the certificate files of docs/window/refine; it proves
+    the results that docs/proof.md cites for this route (Zudilin's Lemma 19, the prime number
+    theorem). README.md lists the differences. The refined denominators (route R1) and the
+    saddle-point analysis of docs/window/proof.md are not formalised.
+
+review:
+  status: agent-reviewed
+  reviewers:
+    - "Claude auditor and verifier subagents (AI systems, not human reviewers)"
+  notes: >-
+    Not peer-reviewed: no human expert has checked the informal proof (docs/proof.md) or the Lean
+    proof. Before submission: (1) each of the three tracks behind docs/proof.md was re-derived by
+    an adversarial verifier subagent with its own code, and the assembler checked the joins between
+    them (docs/proof.md §§5 and 8). (2) Two adversarial AI audit passes (STATUS_WINDOW.md,
+    "Adversarial audit (window)"; code and logs in python/window_audit/) checked the definitions
+    and every statement for faithfulness to Zudilin's paper and to the informal proof and for
+    soundness (no vacuous statement, no junk-value loophole), with independent exact-arithmetic
+    recomputations; the mirror python/window_mirror.py checks every statement numerically (415,069
+    checks, 0 failures). (3) The sorry and axiom census and a kernel replay of every module with
+    leanchecker; CI repeats both. (4) #print axioms of the main theorems lists only propext,
+    Classical.choice and Quot.sound. (5) On 2026-09-26 the toolchain's lake comparator, run as
+    Palomar runs it (Challenge.lean compiled outside Lake against Mathlib only, both modules
+    exported with leanexport, Lean's kernel plus the NanoDa and con-ron kernels), accepted
+    Solution.lean against Challenge.lean; the run was unsandboxed, because bubblewrap was not
+    installed on that machine. An altered copy of Challenge.lean, with ζ(23) in place of ζ(21), was
+    rejected. An auditor subagent repeated the run the same day with the same result, and a second
+    altered copy, with ∃ q : ℤ in place of ∃ q : ℚ, was also rejected (STATUS_WINDOW.md,
+    "Independent pre-publication audit"). (6) Before publication the unused files of the {7, 9, 11}
+    copy were removed; a declaration-level comparison (the type and value hashes of every constant
+    of the project modules) showed that no remaining declaration changed.
+
+alignment:
+  namespace: ZetaWindow
+  statements:
+    - source: "docs/proof.md §0, Theorem"
+      lean: ZetaWindow.zeta_7_to_21_not_all_rational_palomar
+      module: Challenge (statement), Solution (proof)
+      status: proved
+      note: >-
+        Solution.lean proves it by ZetaWindow.zeta_7_to_21_not_all_rational
+        (Zeta2Lean/Window/Main.lean), which has the same type.
+    - source: "docs/proof.md §1, the linear form (1.1) and the vanishing coefficients"
+      lean: ZetaWindow.LinearForm_proof
+      module: Zeta2Lean.Window.Proofs.LinearForm
+      status: proved
+      note: >-
+        For every admissible configuration; with ZetaWindow.PF_proof (partial fractions) and
+        ZetaWindow.CoeffVanish_proof (the vanishing of the ζ(r) and even-ζ coefficients).
+    - source: "Zudilin, JTNB 16 (2004), Lemma 19 (denominators); docs/proof.md §2.1, §4 S3"
+      lean: ZetaWindow.Lemma19_proof
+      module: Zeta2Lean.Window.Proofs.Lemma19
+      status: proved
+      note: "For every admissible configuration and every n, from the brick lemmas (JTNB Lemmas 15–18)."
+    - source: "Zudilin, JTNB 16 (2004), Proposition 5 (growth of the denominators); docs/window/proof.md §2"
+      lean: ZetaWindow.DenomGrowth_proof
+      module: Zeta2Lean.Window.Proofs.DenomGrowth
+      status: proved
+      note: >-
+        Δₙ ≤ e^(748n) eventually, with the prime number theorem (Zeta2.PNT_proof), the certified
+        φ-table (ZetaWindow.PhiTable_proof, ZetaWindow.PhiData_proof) and ZetaWindow.OmegaPhi0_proof.
+    - source: "docs/proof.md §2.3, Theorem U"
+      lean: ZetaWindow.L20Upper_proof
+      module: Zeta2Lean.Window.Proofs.Lemma20Upper
+      status: proved
+      note: "|F̃ₙ| ≤ e^(−748.1n) eventually (rate 749 with the tangent point η = 9 in place of 750.618)."
+    - source: "docs/proof.md §2.2, Theorem N"
+      lean: ZetaWindow.AuxPrime_proof
+      module: Zeta2Lean.Window.Proofs.AuxPrime
+      status: proved
+      note: "For all large n with ℓ = 63n − 1 prime, in place of every even n ≥ 2."
+    - source: "docs/proof.md §3, the final argument"
+      lean: ZetaWindow.main_of_stmts
+      module: Zeta2Lean.Window.Assembly
+      status: proved
+      note: >-
+        With ZetaWindow.Fn_frequently_ne_zero (Dirichlet's theorem and the ℓ-adic separation) and
+        ZetaWindow.Criterion_proof (Zudilin's Proposition 5, elementary part).
+    - source: "Prime number theorem ψ(x)/x → 1"
+      lean: Zeta2.PNT_proof
+      module: Zeta2Lean.Cited.PNT
+      status: proved
+      note: "From the vendored Lean proof of the Wiener–Ikehara theorem."
+
+acknowledgements: >-
+  Mathlib. The vendored Wiener–Ikehara and Schwartz-density files of mathlib4 pull requests #43046,
+  #43233 and #43238 by Terence Tao, adapted from the PrimeNumberTheoremAnd project, keep their
+  Apache-2.0 headers. Lean's lake comparator, lean4export, leanchecker, NanoDa and con-ron were used
+  for checking.

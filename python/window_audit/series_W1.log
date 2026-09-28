@@ -1,0 +1,15 @@
+$ python series_barnes.py series W 1 700 1300
+V_3 identity residual: 0
+V_5 identity residual: 0
+== config W n=1: h0=162 h1=48 |Krange|=67  laurent 0.2s
+  s with A_s != 0: [7, 9, 11, 13, 15, 17, 19, 21]  window: [7, 9, 11, 13, 15, 17, 19, 21]  equal: True
+  A0 (Lean, H_{k-h1}) == A0' (H_{k-1}): True
+  m_j/n: [Fraction(63, 1), Fraction(63, 1), Fraction(62, 1), Fraction(61, 1), Fraction(60, 1), Fraction(60, 1)] ...  omega_lean == omega_zud for all p in Phi: True  min omega_p: 4
+  log Delta_n / n ~ 902.701
+  Lemma19: Delta*A integral for all: True  min slack 0  primes with zero slack (first 12): [13, 17, 19, 23, 29, 31, 37, 41, 43, 67, 71, 73]
+  LaurentInt/LaurentVal/Supp/Symm/ressum failures: []
+  max log10|coef| ~ 456.4 ; F_n = 6.3892022672339859747e-348 ; log|F_n| = -799.4450029421402 ; log|F_n|/n = -799.445002942
+  FAILURES: 0 []   total 0.4s
+[series W n=1] T=700: sum = 6.389202267233985974674438e-348  max|term| = 1.6538e-332  last term = 4.4251e-607
+   relative difference to the exact linear form: 1.2097e-259   (161s)
+[161 s]

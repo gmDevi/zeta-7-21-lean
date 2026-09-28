@@ -1,0 +1,72 @@
+=== 159 181/20 60
+(V) U(x0,p) in [-750.630934439296, -750.630934439296]   U'(x0,p) in [0.0003415037523, 0.0003415037523]
+(V) sup_{[0,A]} U <= -750.6183158756477951  =>  C0' >= 750.6183158756477951   (exact rational, 41 digits in the denominator)
+    C0' >= 748.1 : True
+    C0' >= 750.6 : True
+    C0' >= 750.618 : True
+    C0' >= 750.7116 : False
+(D) U' < 0 on [A, Y]: True, cells [('46', '60', '-3.88734')]
+(T) kappa in [0.150061969800853, 0.150061969800853] > 22/(162+2Y) = 0.078014184 : True
+(B) B = max(28.82595551, 15.09068832) : True
+(K) C_eta in [1275.77611272376, 1275.77611272376]  K1 in [14.7201681459758, 14.7201681459758]  K2 in [29.9439541596057, 29.9439541596057]  log K <= 116.9271258619
+    |F_n| <= exp(-748.1 n) for every n >= 74
+    |F_n| <= exp(-748.2 n) for every n >= 78
+    |F_n| <= exp(-747.0513057897 n) for every n >= 51
+    |F_n| <= exp(-740.0 n) for every n >= 16
+    |F_n| <= exp(-731.5 n) for every n >= 8
+    new elementary enclosures in stage V: U(p), dU(p), C_eta:     138
+    new elementary enclosures in stage D:                         78
+    new elementary enclosures in stage T:                         3
+    new elementary enclosures in stage B:                         20
+    new elementary enclosures in stage K:                         7
+    new elementary enclosures in stage n0 (log n values, optional): 58
+elementary enclosures used: 304 (143 log, 161 atan) + pi + log 2
+ALL CERTIFIED (exact rational)  time 0.1s
+=== 159 9 60
+(V) U(x0,p) in [-750.63131127118, -750.63131127118]   U'(x0,p) in [0.014738255, 0.014738255]
+(V) sup_{[0,A]} U <= -750.0859958360402970  =>  C0' >= 750.0859958360402970   (exact rational, 41 digits in the denominator)
+    C0' >= 748.1 : True
+    C0' >= 750.6 : False
+    C0' >= 750.618 : False
+    C0' >= 750.7116 : False
+(D) U' < 0 on [A, Y]: True, cells [('46', '60', '-3.88734')]
+(T) kappa in [0.150061969800853, 0.150061969800853] > 22/(162+2Y) = 0.078014184 : True
+(B) B = max(28.82595551, 15.09068832) : True
+(K) C_eta in [1275.77611272376, 1275.77611272376]  K1 in [14.7201681459758, 14.7201681459758]  K2 in [29.9439541596057, 29.9439541596057]  log K <= 116.9271258619
+    |F_n| <= exp(-748.1 n) for every n >= 96
+    |F_n| <= exp(-748.2 n) for every n >= 102
+    |F_n| <= exp(-747.0513057897 n) for every n >= 61
+    |F_n| <= exp(-740.0 n) for every n >= 16
+    |F_n| <= exp(-731.5 n) for every n >= 9
+    new elementary enclosures in stage V: U(p), dU(p), C_eta:     138
+    new elementary enclosures in stage D:                         78
+    new elementary enclosures in stage T:                         3
+    new elementary enclosures in stage B:                         20
+    new elementary enclosures in stage K:                         7
+    new elementary enclosures in stage n0 (log n values, optional): 81
+elementary enclosures used: 327 (166 log, 161 atan) + pi + log 2
+ALL CERTIFIED (exact rational)  time 0.1s
+=== 3984/25 26208/3125 60
+(V) U(x0,p) in [-750.711686131496, -750.711686131496]   U'(x0,p) in [-3.129583149e-07, -3.129583149e-07]
+(V) sup_{[0,A]} U <= -750.7116742473916702  =>  C0' >= 750.7116742473916702   (exact rational, 43 digits in the denominator)
+    C0' >= 748.1 : True
+    C0' >= 750.6 : True
+    C0' >= 750.618 : True
+    C0' >= 750.7116 : True
+(D) U' < 0 on [A, Y]: True, cells [('1159/25', '60', '-3.9814')]
+(T) kappa in [0.176324192321035, 0.176324192321035] > 22/(162+2Y) = 0.078014184 : True
+(B) B = max(35.20205644, 15.0156549) : True
+(K) C_eta in [1275.77611272376, 1275.77611272376]  K1 in [14.7201681459758, 14.7201681459758]  K2 in [29.9439541596057, 29.9439541596057]  log K <= 120.0636865495
+    |F_n| <= exp(-748.1 n) for every n >= 73
+    |F_n| <= exp(-748.2 n) for every n >= 76
+    |F_n| <= exp(-747.0513057897 n) for every n >= 50
+    |F_n| <= exp(-740.0 n) for every n >= 16
+    |F_n| <= exp(-731.5 n) for every n >= 8
+    new elementary enclosures in stage V: U(p), dU(p), C_eta:     138
+    new elementary enclosures in stage D:                         78
+    new elementary enclosures in stage T:                         3
+    new elementary enclosures in stage B:                         20
+    new elementary enclosures in stage K:                         7
+    new elementary enclosures in stage n0 (log n values, optional): 56
+elementary enclosures used: 302 (141 log, 161 atan) + pi + log 2
+ALL CERTIFIED (exact rational)  time 0.1s

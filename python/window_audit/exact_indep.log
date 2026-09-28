@@ -1,0 +1,70 @@
+$ python exact_indep.py W 1 lean
+== config W n=1: h0=162 h1=48 |Krange|=67  laurent 0.2s
+  Lean-literal B = log/exp Laurent coefficients: 1206 checked, mismatches 0  (6.3s)
+  s with A_s != 0: [7, 9, 11, 13, 15, 17, 19, 21]  window: [7, 9, 11, 13, 15, 17, 19, 21]  equal: True
+  A0 (Lean, H_{k-h1}) == A0' (H_{k-1}): True
+  m_j/n: [Fraction(63, 1), Fraction(63, 1), Fraction(62, 1), Fraction(61, 1), Fraction(60, 1), Fraction(60, 1)] ...  omega_lean == omega_zud for all p in Phi: True  min omega_p: 4
+  log Delta_n / n ~ 902.701
+  Lemma19: Delta*A integral for all: True  min slack 0  primes with zero slack (first 12): [13, 17, 19, 23, 29, 31, 37, 41, 43, 67, 71, 73]
+  LaurentInt/LaurentVal/Supp/Symm/ressum failures: []
+  max log10|coef| ~ 456.4 ; F_n = 6.3892022672339859747e-348 ; log|F_n| = -799.4450029421402 ; log|F_n|/n = -799.445002942
+  FAILURES: 0 []   total 6.9s
+[7 s]
+$ python exact_indep.py W 2 lean
+== config W n=2: h0=322 h1=95 |Krange|=133  laurent 1.1s
+  Lean-literal B = log/exp Laurent coefficients: 2394 checked, mismatches 0  (32.2s)
+  s with A_s != 0: [7, 9, 11, 13, 15, 17, 19, 21]  window: [7, 9, 11, 13, 15, 17, 19, 21]  equal: True
+  A0 (Lean, H_{k-h1}) == A0' (H_{k-1}): True
+  m_j/n: [Fraction(63, 1), Fraction(63, 1), Fraction(62, 1), Fraction(61, 1), Fraction(60, 1), Fraction(60, 1)] ...  omega_lean == omega_zud for all p in Phi: True  min omega_p: 3
+  log Delta_n / n ~ 844.723
+  Lemma19: Delta*A integral for all: True  min slack 0  primes with zero slack (first 12): [19, 29, 31, 37, 41, 43, 59, 61, 67, 71, 73, 79]
+  LaurentInt/LaurentVal/Supp/Symm/ressum failures: []
+  max log10|coef| ~ 926.5 ; F_n = 5.5532483742532531272e-678 ; log|F_n| = -1559.438310000763 ; log|F_n|/n = -779.719155
+  FAILURES: 0 []   total 34.6s
+[35 s]
+$ python exact_indep.py W 3
+== config W n=3: h0=482 h1=142 |Krange|=199  laurent 4.3s
+  s with A_s != 0: [7, 9, 11, 13, 15, 17, 19, 21]  window: [7, 9, 11, 13, 15, 17, 19, 21]  equal: True
+  A0 (Lean, H_{k-h1}) == A0' (H_{k-1}): True
+  m_j/n: [Fraction(63, 1), Fraction(63, 1), Fraction(62, 1), Fraction(61, 1), Fraction(60, 1), Fraction(60, 1)] ...  omega_lean == omega_zud for all p in Phi: True  min omega_p: 2
+  log Delta_n / n ~ 852.866
+  Lemma19: Delta*A integral for all: True  min slack 0  primes with zero slack (first 12): [23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+  LaurentInt/LaurentVal/Supp/Symm/ressum failures: []
+  max log10|coef| ~ 1398.1 ; F_n = -8.7876825567624731349e-1006 ; log|F_n| = -2314.227252520493 ; log|F_n|/n = -771.409084173
+  FAILURES: 0 []   total 7.6s
+[8 s]
+$ python exact_indep.py T3 1 lean
+== config T3 n=1: h0=93 h1=28 |Krange|=38  laurent 0.0s
+  Lean-literal B = log/exp Laurent coefficients: 380 checked, mismatches 0  (0.4s)
+  s with A_s != 0: [5, 7, 9, 11]  window: [5, 7, 9, 11]  equal: True
+  A0 (Lean, H_{k-h1}) == A0' (H_{k-1}): True
+  m_j/n: [Fraction(35, 1), Fraction(34, 1), Fraction(33, 1), Fraction(33, 1), Fraction(33, 1), Fraction(33, 1)] ...  omega_lean == omega_zud for all p in Phi: True  min omega_p: 2
+  log Delta_n / n ~ 275.351
+  Lemma19: Delta*A integral for all: True  min slack 0  primes with zero slack (first 12): [11, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59]
+  LaurentInt/LaurentVal/Supp/Symm/ressum failures: []
+  max log10|coef| ~ 139.8 ; F_n = 1.1610215998248545543e-108 ; log|F_n| = -248.5298897363139 ; log|F_n|/n = -248.529889736
+  FAILURES: 0 []   total 0.5s
+[1 s]
+$ python exact_indep.py T3 2 lean
+== config T3 n=2: h0=184 h1=55 |Krange|=75  laurent 0.1s
+  Lean-literal B = log/exp Laurent coefficients: 750 checked, mismatches 0  (1.7s)
+  s with A_s != 0: [5, 7, 9, 11]  window: [5, 7, 9, 11]  equal: True
+  A0 (Lean, H_{k-h1}) == A0' (H_{k-1}): True
+  m_j/n: [Fraction(35, 1), Fraction(34, 1), Fraction(33, 1), Fraction(33, 1), Fraction(33, 1), Fraction(33, 1)] ...  omega_lean == omega_zud for all p in Phi: True  min omega_p: 2
+  log Delta_n / n ~ 268.328
+  Lemma19: Delta*A integral for all: True  min slack 0  primes with zero slack (first 12): [17, 19, 29, 41, 43, 47, 71, 73, 79, 83, 89, 97]
+  LaurentInt/LaurentVal/Supp/Symm/ressum failures: []
+  max log10|coef| ~ 285.7 ; F_n = 7.7239491483830205221e-210 ; log|F_n| = -481.4985437477908 ; log|F_n|/n = -240.749271874
+  FAILURES: 0 []   total 1.9s
+[2 s]
+$ python exact_indep.py T3 3
+== config T3 n=3: h0=275 h1=82 |Krange|=112  laurent 0.1s
+  s with A_s != 0: [5, 7, 9, 11]  window: [5, 7, 9, 11]  equal: True
+  A0 (Lean, H_{k-h1}) == A0' (H_{k-1}): True
+  m_j/n: [Fraction(35, 1), Fraction(34, 1), Fraction(33, 1), Fraction(33, 1), Fraction(33, 1), Fraction(33, 1)] ...  omega_lean == omega_zud for all p in Phi: True  min omega_p: 2
+  log Delta_n / n ~ 248.618
+  Lemma19: Delta*A integral for all: True  min slack 0  primes with zero slack (first 12): [17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 61, 67]
+  LaurentInt/LaurentVal/Supp/Symm/ressum failures: []
+  max log10|coef| ~ 432.5 ; F_n = -5.5431509030828993931e-310 ; log|F_n| = -712.0888157340057 ; log|F_n|/n = -237.362938578
+  FAILURES: 0 []   total 0.4s
+[1 s]

@@ -1,0 +1,5 @@
+n=4 c=1 ell=251: v_ell(G_k(0)) on K = [1, 1]; ratio identity (5.1) exact: True; reduction mod ell: [True]
+n=5 c=2 ell=313: v_ell(G_k(0)) on K = [1, 1, 1]; ratio identity (5.1) exact: True; reduction mod ell: [True, True]
+n=7 c=2 ell=439: v_ell(G_k(0)) on K = [1, 1, 1]; ratio identity (5.1) exact: True; reduction mod ell: [True, True]
+n=8 c=1 ell=503: v_ell(G_k(0)) on K = [1, 1]; ratio identity (5.1) exact: True; reduction mod ell: [True]
+n=11 c=2 ell=691: v_ell(G_k(0)) on K = [1, 1, 1]; ratio identity (5.1) exact: True; reduction mod ell: [True, True]

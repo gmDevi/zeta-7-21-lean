@@ -1,0 +1,11 @@
+config q23_160 tau_d = (159.356418053795 + 8.39371237206876j)  Re f0 = -750.711694833944  Im f0/pi = -466.613357473
+n=  1  log|F|/n = -799.44500294214  sign +1   branch rates {3: -795.122, 1: -830.33}   exact/asym = 1.0954392   | exact log|F| = -799.4450029421  contour = -799.4450029421402  diff = -2.033e-14  sign exact +1
+n=  2  log|F|/n = -779.71915500038  sign +1   branch rates {3: -777.558, 1: -810.231}   exact/asym = 0.9476834   | exact log|F| = -1559.4383100008  contour = -1559.438310000763  diff = -3.527e-14  sign exact +1
+n=  3  log|F|/n = -771.4090841735  sign -1   branch rates {3: -769.968, 1: -793.27}   exact/asym = 1.0118198   | exact log|F| = -2314.2272525205  contour = -2314.227252520493  diff = 8.910e-14  sign exact -1
+n=  4  log|F|/n = -767.41665875228  sign +1   branch rates {3: -766.336, 1: -780.871}   exact/asym = 1.0547218   | exact log|F| = -3069.6666350091  contour = -3069.666635009114  diff = -2.208e-13  sign exact +1
+n=  5  log|F|/n = -764.45489861621  sign +1   branch rates {3: -763.59, 1: -778.492}   exact/asym = 0.99708959   | exact log|F| = -3822.2744930811  contour = -3822.274493081074  diff = -1.882e-13  sign exact +1
+n=  6  log|F|/n = -762.52641109153  sign -1   branch rates {3: -761.806, 1: -777.127}   exact/asym = 1.0114401   | exact log|F| = -4575.1584665492  contour = -4575.158466549209  diff = -4.424e-13  sign exact -1
+n=  7  log|F|/n = -761.34023381377  sign -1   branch rates {3: -760.723, 1: -775.589}   exact/asym = 0.95942007   | exact log|F| = -5329.3816366964  contour = -5329.381636696402  diff = 4.477e-13  sign exact -1
+n=  8  log|F|/n = -760.00503215154  sign +1   branch rates {3: -759.465, 1: -774.694}   exact/asym = 1.0028101   | exact log|F| = -6080.0402572123  contour = -6080.040257212336  diff = -3.473e-13  sign exact +1
+n=  9  log|F|/n = -759.20888703219  sign -1   branch rates {3: -758.729, 1: -774.156}   exact/asym = 1.014937   | exact log|F| = -6832.8799832897  contour = -6832.879983289731  diff = 2.424e-13  sign exact -1
+done

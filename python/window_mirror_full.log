@@ -1,0 +1,63 @@
+== Admissible / window / muSum
+   window [7, 9, 11, 13, 15, 17, 19, 21], muSum 1341
+== Stmt_BrickInt, Stmt_BrickVal (random bricks, exact)
+== Stmt_Harmonic
+== Stmt_OmegaPhi0 (random)
+== Stmt_ZetaReal (mpmath)
+== Stmt_L20Upper: recorded exact values, n <= 9 (docs/window/exact_r5_q23_n9.jsonl)
+   n=1: log|F_n|/n = -799.4450 (need <= -748.1), sign +1
+   n=2: log|F_n|/n = -779.7192 (need <= -748.1), sign +1
+   n=3: log|F_n|/n = -771.4091 (need <= -748.1), sign -1
+   n=4: log|F_n|/n = -767.4167 (need <= -748.1), sign +1
+   n=5: log|F_n|/n = -764.4549 (need <= -748.1), sign +1
+   n=6: log|F_n|/n = -762.5264 (need <= -748.1), sign -1
+   n=7: log|F_n|/n = -761.3402 (need <= -748.1), sign -1
+   n=8: log|F_n|/n = -760.0050 (need <= -748.1), sign +1
+   n=9: log|F_n|/n = -759.2089 (need <= -748.1), sign -1
+== Laurent data, CoeffVanish, Lemma19, PF, linear form (exact)
+   [thm3 n=1] h0=93, |Krange|=38, Laurent data in 0.3s
+   [thm3 n=1] log Dprod = 391.244, log PhiN = 115.892, log Delta = 275.351
+   [thm3 n=1] linear form value: log|F| = -248.5298897363, sign 1
+   [thm3 n=1] zud_exact.py value: log|F| = -248.5298897363; relative difference 3.41e-184
+   [thm3 n=2] h0=184, |Krange|=75, Laurent data in 1.2s
+   [thm3 n=2] log Dprod = 764.866, log PhiN = 228.209, log Delta = 536.656
+   [thm3 n=2] linear form value: log|F| = -481.4985437478, sign 1
+   [thm3 n=3] h0=275, |Krange|=112, Laurent data in 2.7s
+   [thm3 n=3] log Dprod = 1160.908, log PhiN = 415.054, log Delta = 745.854
+   [thm3 n=3] linear form value: log|F| = -712.0888157340, sign -1
+   [cfgW n=1] h0=162, |Krange|=67, Laurent data in 4.8s
+   [cfgW n=1] log Dprod = 1298.618, log PhiN = 395.917, log Delta = 902.701
+   [cfgW n=1] linear form value: log|F| = -799.4450029421, sign 1
+   [cfgW n=1] zud_exact.py value: log|F| = -799.4450029421; relative difference 7.29e-263
+   [cfgW n=2] h0=322, |Krange|=133, Laurent data in 22.6s
+   [cfgW n=2] log Dprod = 2611.348, log PhiN = 921.902, log Delta = 1689.446
+   [cfgW n=2] linear form value: log|F| = -1559.4383100008, sign 1
+== Stmt_LinearForm series check (thm3, n=1, T=1500)
+   partial sum to t<1500: rel. error 7.7311e-99, last term 5.2548e-208
+== Stmt_PhiTable (every piece: random x in the piece, all critical y) and Stmt_PhiData
+   pieces checked: 2602, violations: 0
+   phiSumQ = 593.5146378485;  muSum - phiSumQ = 747.4853621515  (C2hi = 748.0)
+== Stmt_DenomGrowth (trend; PNT is asymptotic, small n are far from the limit)
+   n=  5: log Dprod/n =  1338.423, log PhiN/n =  505.492 (table bound  391.256), log Delta/n =  832.931   [1s]
+   n= 10: log Dprod/n =  1331.298, log PhiN/n =  528.243 (table bound  477.291), log Delta/n =  803.055   [2s]
+   n= 20: log Dprod/n =  1335.330, log PhiN/n =  550.008 (table bound  532.431), log Delta/n =  785.322   [5s]
+   n= 40: log Dprod/n =  1346.117, log PhiN/n =  565.589 (table bound  559.280), log Delta/n =  780.528   [18s]
+   (limits: 1341 and 593.95 (table: 593.51), so log Delta/n -> C2 = 747.05; Stmt_DenomGrowth needs < 748)
+== Stmt_AuxPrime (n even, l = 63n - 1 prime): v_l(A0 cfgW n) < 0 <= v_l(Acoef cfgW n s), s in window
+   [exact, literal Form] n=4, l=251: v_l(A0) = -5, v_l(A_s) (s = 7, 9, ..., 21) = [1, 1, 0, 0, 2, 4, 8, 10]   [153s]
+   [l-adic mod l^30] n=  4, l=  251: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [1.7s]
+   [l-adic mod l^30] n=  8, l=  503: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [2.3s]
+   [l-adic mod l^30] n= 14, l=  881: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [3.9s]
+   [l-adic mod l^30] n= 20, l= 1259: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [9.4s]
+   [l-adic mod l^30] n= 24, l= 1511: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [15.8s]
+   [l-adic mod l^30] n= 26, l= 1637: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [11.5s]
+   [l-adic mod l^30] n= 30, l= 1889: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [13.1s]
+   [l-adic mod l^30] n= 34, l= 2141: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [14.2s]
+   [l-adic mod l^30] n= 36, l= 2267: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [18.3s]
+   [l-adic mod l^30] n= 38, l= 2393: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [23.6s]
+   [l-adic mod l^30] n= 46, l= 2897: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [23.1s]
+   [l-adic mod l^30] n= 48, l= 3023: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [25.6s]
+   [l-adic mod l^30] n= 56, l= 3527: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [35.2s]
+   [l-adic mod l^30] n= 60, l= 3779: v_l(A0) = -5, v_l(A_s) = [1, 1, 0, 0, 2, 4, 8, 10]   [69.0s]
+
+415069 checks, 0 failed, 684s

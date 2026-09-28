@@ -1,0 +1,12 @@
+$ python delta_growth.py 1,2,3,5,10,20,40,80,160,320,640
+n=   1  log Dprod/n = 1298.618  log Phi_n/n = 395.917  log Delta_n/n = 902.701
+n=   2  log Dprod/n = 1305.674  log Phi_n/n = 460.951  log Delta_n/n = 844.723
+n=   3  log Dprod/n = 1332.806  log Phi_n/n = 479.940  log Delta_n/n = 852.866
+n=   5  log Dprod/n = 1338.423  log Phi_n/n = 505.492  log Delta_n/n = 832.931
+n=  10  log Dprod/n = 1331.298  log Phi_n/n = 528.243  log Delta_n/n = 803.055
+n=  20  log Dprod/n = 1335.330  log Phi_n/n = 550.008  log Delta_n/n = 785.322
+n=  40  log Dprod/n = 1346.117  log Phi_n/n = 565.589  log Delta_n/n = 780.528
+n=  80  log Dprod/n = 1341.190  log Phi_n/n = 571.466  log Delta_n/n = 769.725
+n= 160  log Dprod/n = 1341.530  log Phi_n/n = 579.904  log Delta_n/n = 761.626
+n= 320  log Dprod/n = 1337.205  log Phi_n/n = 580.985  log Delta_n/n = 756.221
+n= 640  log Dprod/n = 1340.982  log Phi_n/n = 586.030  log Delta_n/n = 754.952

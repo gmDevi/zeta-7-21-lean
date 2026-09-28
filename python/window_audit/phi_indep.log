@@ -1,0 +1,16 @@
+$ python phi_indep.py Zeta2Lean/Window/PhiTable.lean
+Farey-160 points: 7807
+min phi on open Farey intervals: 0
+min phi at Farey points: 0
+merged pieces: 793  nonzero: 791
+int_[1/60,1) = 584.83818219888237199
+int_[1,inf)  = 9.1105120114433438136
+int total    = 593.9486942103257158018716
+C2 = 1341 - int = 747.0513057896742841981284
+phiSumQ(60,20) over my Farey pieces (v>0): 593.5146378485069  1341 - it = 747.4853621514931
+Lean table entries: 2602
+table violations: 0
+phiSumQ(60,20) of Lean table = 593.5146378485069  exact num bits: 3943
+1341 - phiSumQ = 747.4853621514931  < 748 ? True
+positive-phi Farey intervals not covered: 0 []
+[18 s]

@@ -1,0 +1,36 @@
+name: Lean CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+      - name: Sorry / forbidden-construct census
+        run: |
+          bash scripts/audit.sh | tee audit.log
+          ! grep -A1000 '== sorry / admit per file' audit.log | grep -B1000 '== forbidden' | grep -q '\.lean:'
+          grep -A1000 '== forbidden' audit.log | grep -q '(none)'
+      - name: Axioms of the main theorems
+        run: |
+          lake env lean Zeta2Lean/Window/Main.lean 2>&1 | tee main.log
+          grep -F "'ZetaWindow.zeta_7_to_21_not_all_rational' depends on axioms: [propext, Classical.choice, Quot.sound]" main.log
+          ! grep -q 'sorryAx' main.log
+          printf 'import Solution\n#print axioms ZetaWindow.zeta_7_to_21_not_all_rational_palomar\n' > "$RUNNER_TEMP/SolutionAxioms.lean"
+          lake env lean "$RUNNER_TEMP/SolutionAxioms.lean" 2>&1 | tee solution.log
+          grep -F "'ZetaWindow.zeta_7_to_21_not_all_rational_palomar' depends on axioms: [propext, Classical.choice, Quot.sound]" solution.log
+      - name: Kernel replay (leanchecker, one module at a time)
+        run: |
+          BIN="$(dirname "$(elan which lean)")"
+          for m in $(find Zeta2Lean -name '*.lean' -not -path '*/Scratch/*' | sed 's#\.lean$##; s#/#.#g' | sort) Solution; do
+            echo "leanchecker $m"
+            lake env "$BIN/leanchecker" "$m"
+          done

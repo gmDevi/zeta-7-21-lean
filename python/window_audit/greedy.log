@@ -1,0 +1,7 @@
+$ python greedy.py Zeta2Lean/Window/PhiTable.lean
+C2hi=748.0 needs 2364 pieces (sum 593.0004 > 593.0000)
+C2hi=749.0 needs 2130 pieces (sum 592.0012 > 592.0000)
+C2hi=750.0 needs 1961 pieces (sum 591.0052 > 591.0000)
+C2hi=750.5 needs 1891 pieces (sum 590.5044 > 590.5000)
+C2hi=750.6 needs 1878 pieces (sum 590.4048 > 590.4000)
+[0 s]

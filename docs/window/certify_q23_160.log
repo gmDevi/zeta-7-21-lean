@@ -1,0 +1,18 @@
+(R) Rouche: |P(z0)|<=2.0592e+27  |P'(z0)|>=6.6238e+50  rho=1.2435e-23  sup|P''|<=4.975e+64  ->  CERTIFIED (exactly one zero of P in D(z0,rho))
+(R) branch: f'(B)/(i pi) = [3.0, 3.0] + i[-5.4886e-24, 5.516e-24]  ->  CERTIFIED lambda = 3
+(S) f''(tau_d) = [0.272122458999, 0.272122458999] + i[0.542987421932, 0.542987421932]  Re>0: CERTIFIED
+(S) C0 = -Re f0(tau_d) in [750.7116948339443, 750.7116948339443]   (width 4.13e-21)
+(S) omega/pi = Im f0(tau_d)/pi in [-466.61335747343, -466.61335747343]; nearest integer -467, distance >= 0.386643  ->  CERTIFIED (omega not in pi Z)
+(M) A = x* - eta0 + eta_1 = 46.356418 > y* = 8.3937124 : CERTIFIED
+(M') Re f''(x*+iy) > 0 on [0, A] by subdivision (200 pieces): CERTIFIED   (min lower bound 0.0890048)
+(T) tail threshold Y_d = 55.0: r[atan(Y/x*)+atan(Y/(eta0-x*))] > lambda_d pi : CERTIFIED
+(D) Im f'(x*+iy) > lambda_d pi on [A, Y_d] = [46.3564, 55.0]: CERTIFIED  (1 pieces, min lower bound 14.252036 vs 9.424778)
+(V) u_d(y*) in [-750.7116948339443, -750.7116948339443] vs Re f0(tau_d) in [-750.7116948339443, -750.7116948339443]: overlap CERTIFIED
+(G) delta=1: u_d(y*-delta) <= -750.850064732, u_d(y*+delta) <= -750.845749773; eps = Re f0 - max >= 0.13405494 : CERTIFIED
+(G) delta=0.25: u_d(y*-delta) <= -750.720232736, u_d(y*+delta) <= -750.720165756; eps = Re f0 - max >= 0.0084709222 : CERTIFIED
+(G) delta=2: u_d(y*-delta) <= -751.27606984, u_d(y*+delta) <= -751.240796769; eps = Re f0 - max >= 0.52910194 : CERTIFIED
+(G) delta=5: u_d(y*-delta) <= -754.568315831, u_d(y*+delta) <= -753.907708695; eps = Re f0 - max >= 3.1960139 : CERTIFIED
+(K) branch k=1: sup_{[0,y*]} u_k <= -754.606196747  (7 pieces; need <= Re f0 - 1 = -751.711694834): CERTIFIED
+     r[atan(y*/x*)+atan(y*/(eta0-x*))] = 7.73448 vs k pi = 3.14159 (Im f'(x*+iy*) = lambda_d pi > k pi anyway)
+(X) u_k(0) = Re f(x*) in [-767.130018491, -767.130018491] (same for all k)
+ALL CERTIFIED  time 10.5s
