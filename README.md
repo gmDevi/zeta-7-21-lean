@@ -14,6 +14,10 @@ remarks that his lists ζ(7), …, ζ(35) and ζ(9), …, ζ(51) can be shortene
 prove the needed asymptotic lemma (his Lemma 20) for more than three derivatives. This repository carries out that
 improvement for the list starting at ζ(7), without Lemma 20.
 
+The formalization (commit `a3b69fc`) is registered in the Palomar registry of Lean-verified results as
+[PALOMAR-2026-09-30-000007](https://palomar-registry.org/entry.html?id=PALOMAR-2026-09-30-000007&version=1)
+(version 1).
+
 ## What exactly is proved in Lean
 
 ```lean
@@ -202,6 +206,8 @@ place of ζ(21), was rejected. On 2026-09-28 every Lean file was ported to Lean'
 `public import` and an `@[expose] public section`), as Palomar now requires; no statement or proof changed, and
 the same comparator run and negative control gave the same results. Compiled alone with `lean` against the pinned
 Mathlib, `Challenge.lean` depends only on Lean core and Mathlib. `formalization.yaml` records the sources, the production process and the review status.
+Palomar verified and registered commit `a3b69fc43aea3dd140540f6e8380c7d0fecce028` on 2026-09-30 as
+PALOMAR-2026-09-30-000007, version 1; later commits change only documentation and helper scripts.
 
 ## Building
 

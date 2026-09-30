@@ -15,7 +15,7 @@ while [ ${#queue[@]} -gt 0 ]; do
   [ -n "${seen[$m]}" ] && continue
   seen[$m]=1
   f="${m//.//}.lean"
-  for i in $(grep -E '^import Zeta2Lean' "$f" | awk '{print $2}'); do queue+=("$i"); done
+  for i in $(grep -E '^(public )?import Zeta2Lean' "$f" | awk '{print $NF}'); do queue+=("$i"); done
 done
 MODS=$(printf '%s\n' "${!seen[@]}" | sort)
 echo "modules: $(echo "$MODS" | wc -l)"
